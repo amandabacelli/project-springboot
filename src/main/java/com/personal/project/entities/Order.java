@@ -1,12 +1,14 @@
 package com.personal.project.entities;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.personal.project.entities.enums.OrderStatus;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import org.hibernate.annotations.CreationTimestamp;
 
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -30,11 +32,15 @@ public class Order implements Serializable {
     @CreationTimestamp
     private LocalDateTime moment;
 
+    @Enumerated(EnumType.STRING)
+    private OrderStatus orderStatus;
+
     @ManyToOne
     @JoinColumn(name = "client_id")
     private User client;
 
-    public Order(User client) {
+    public Order(OrderStatus orderStatus, User client) {
+        this.orderStatus = orderStatus;
         this.client = client;
     }
 }
