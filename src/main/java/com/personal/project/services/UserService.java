@@ -21,4 +21,8 @@ public class UserService {
     public User findById(Long id) {
         return repository.findById(id).orElse(null);
     }
+
+    public User save(User user) {
+        return repository.save(user);
+    }
 }
