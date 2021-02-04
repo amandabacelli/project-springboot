@@ -1,9 +1,7 @@
 package com.personal.project.entities;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -15,11 +13,14 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-@Getter
-@EqualsAndHashCode
+
+
 @Entity
+@Getter
+@Setter
+@EqualsAndHashCode
 @Table(name = "tb_user")
-@NoArgsConstructor(onConstructor = @__(@Deprecated))
+@NoArgsConstructor
 public class User implements Serializable {
 
     @Id
