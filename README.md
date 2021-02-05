@@ -28,5 +28,5 @@ Aplicação consiste em um cadastro de pedidos, produtos, pagamentos e usuários
 
 Mapeamento e tratamento de exceções;
 Relacionamentos entre tabelas (OneToOne, ManyToMany,OneToMany);
-Revisão de conceitos de API REST;
+Revisão de conceitos de API REST - CRUD;
 Aplicação de POO;
