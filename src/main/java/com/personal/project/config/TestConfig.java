@@ -1,8 +1,17 @@
 package com.personal.project.config;
 
-import com.personal.project.entities.*;
+import com.personal.project.entities.Category;
+import com.personal.project.entities.Order;
+import com.personal.project.entities.OrderItem;
+import com.personal.project.entities.Payment;
+import com.personal.project.entities.Product;
+import com.personal.project.entities.User;
 import com.personal.project.entities.enums.OrderStatus;
-import com.personal.project.repositories.*;
+import com.personal.project.repositories.CategoryRepository;
+import com.personal.project.repositories.OrderItemRepository;
+import com.personal.project.repositories.OrderRepository;
+import com.personal.project.repositories.ProductRepository;
+import com.personal.project.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Configuration;
